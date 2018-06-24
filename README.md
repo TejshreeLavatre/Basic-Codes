@@ -1,2 +1,2 @@
-# Python-Coding
+# Python-Codes
 Common coding problems in Python
