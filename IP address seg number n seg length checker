@@ -13,6 +13,3 @@ for character in ip_address:
         seg_len = 0
     else:
         seg_len += 1
-
-#if character != '.':
-#    print('Segment number {} contains {} elements'.format(seg_num, seg_len))
