@@ -1,4 +1,4 @@
-#Check whether or not a person is eligible to join the 18-30 club 
+#Check whether or not a person is eligible to join the 18-30 club
 
 name=input('Hello, please enter your name: ')
 print("Hello {}".format(name))
