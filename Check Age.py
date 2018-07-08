@@ -1,6 +1,6 @@
 #Check whether or not a person is eligible to join the 18-30 club
 
-name=input('Hello, please enter your name: ')
+name = input('Hello, please enter your name: ')
 print("Hello {}".format(name))
 age = int(input('Please enter your age: '))
 if 18 <= age < 31:
