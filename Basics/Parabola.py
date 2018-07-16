@@ -1,12 +1,18 @@
-# try:
-import tkinter
-# except ImportError:  # Python 2
-#     import Tkinter as tkinter
+try:
+    import tkinter
+except ImportError:  # Python 2
+    import Tkinter as tkinter
 
 
-def parabola(x):
-    y = x * x / 100
-    return y
+def parabola(drawing, size):
+    for x in range(size):
+        y = x * x / size
+        plot(drawing, x, y)
+        plot(drawing, -x, y)
+
+
+def circle(drawing, radius, g, h, colour="red"):  #Defaults circle's colour to red unless specified otherwise
+    drawing.create_oval(g + radius, h + radius, g - radius, h - radius, outline=colour, width=2)
 
 
 def draw_axes(drawing):
@@ -19,20 +25,27 @@ def draw_axes(drawing):
 
 
 def plot(plotting, x, y):
-    plotting.create_line(x, y, x + 1, y + 1, fill="blue")
+    plotting.create_line(x, -y, x + 1, -y + 1, fill="blue")
 
 
 mainWindow = tkinter.Tk()
 mainWindow.title("Parabola function")
-mainWindow.geometry("350x350")
+mainWindow.geometry("400x400")
 
-canvas = tkinter.Canvas(mainWindow, width=350, height=350)
+canvas = tkinter.Canvas(mainWindow, width=400, height=400)
 canvas.grid(row=0, column=0)
 
 draw_axes(canvas)
-
-for w in range(-100, 100):
-    z = parabola(w)
-    plot(canvas, w, -z)
+parabola(canvas, 100)
+parabola(canvas, 200)
+circle(canvas, 20, 0, 0, "yellow")
+circle(canvas, 50, 50, 50, "green")
+circle(canvas, 50, -50, 50, "black")
+circle(canvas, 50, 50, -50, "purple")
+circle(canvas, 50, -50, -50, "orange")
+circle(canvas, 10, 20, 20)
+circle(canvas, 10, -20, 20)
+circle(canvas, 10, 20, -20)
+circle(canvas, 10, -20, -20)
 
 mainWindow.mainloop()
