@@ -1,7 +1,7 @@
-try:
-    import tkinter
-except ImportError: #Python 2
-    import Tkinter as tkinter
+# try:
+import tkinter
+# except ImportError:  # Python 2
+#     import Tkinter as tkinter
 
 
 def parabola(x):
@@ -9,17 +9,17 @@ def parabola(x):
     return y
 
 
-def draw_axes(canvas):
-    canvas.update()
-    x_origin = canvas.winfo_width() / 2
-    y_origin = canvas.winfo_height() / 2
-    canvas.configure(scrollregion=(-x_origin, -y_origin, x_origin, y_origin))
-    canvas.create_line(-x_origin, 0, x_origin, 0, fill="black")
-    canvas.create_line(0, -y_origin, 0, y_origin, fill="black")
+def draw_axes(drawing):
+    drawing.update()
+    x_origin = drawing.winfo_width() / 2
+    y_origin = drawing.winfo_height() / 2
+    drawing.configure(scrollregion=(-x_origin, -y_origin, x_origin, y_origin))
+    drawing.create_line(-x_origin, 0, x_origin, 0, fill="black")
+    drawing.create_line(0, -y_origin, 0, y_origin, fill="black")
 
 
-def plot(canvas, x, y):
-    canvas.create_line(x, y, x + 1, y + 1, fill="blue")
+def plot(plotting, x, y):
+    plotting.create_line(x, y, x + 1, y + 1, fill="blue")
 
 
 mainWindow = tkinter.Tk()
