@@ -1,5 +1,5 @@
 
-import tkinter
+import tkinter  # Works only for Python 3 and above
 
 _main = tkinter.Tk()
 _main.title("Calculator")
