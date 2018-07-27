@@ -1,6 +1,6 @@
 #Building a basic GUI using tkinter
 
-import tkinter
+import tkinter  # Works only for Python 3 and above
 import os
 
 Main = tkinter.Tk()
