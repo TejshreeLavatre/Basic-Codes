@@ -1,6 +1,6 @@
 #Better version of a Calculator
 
-import tkinter
+import tkinter  # Works only for Python 3 and above
 
 padding = 8
 program = tkinter.Tk()
