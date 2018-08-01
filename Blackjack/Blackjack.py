@@ -78,21 +78,22 @@ def deal_player():
         result_text.set("Dealer wins!")
 
 
-    # global player_ace, player_score
-    # card_value = deal_card(player_card_frame)[0]
-    # if card_value == 1 and not player_ace:
-    #     player_ace = True
-    #     card_value = 11
-    # player_score += card_value
-    # # If we would bust, check if there's an ace and subtract ten
-    # if player_score > 21 and player_ace:
-    #     player_score -= 10
-    #     player_ace = False
-    # player_score_label.set(player_score)
-    # if player_score > 21:
-    #     result_text.set("Dealer wins!")
-    # print(locals())
-
+"""
+    global player_ace, player_score
+    card_value = deal_card(player_card_frame)[0]
+    if card_value == 1 and not player_ace:
+        player_ace = True
+        card_value = 11
+    player_score += card_value
+    # If we would bust, check if there's an ace and subtract ten
+    if player_score > 21 and player_ace:
+        player_score -= 10
+        player_ace = False
+    player_score_label.set(player_score)
+    if player_score > 21:
+        result_text.set("Dealer wins!")
+    print(locals())
+"""
 
 mainWindow = tkinter.Tk()
 # Setup the screen and frames for the dealer and player
