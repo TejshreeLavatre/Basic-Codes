@@ -5,6 +5,4 @@ def fibonacci(x):
         return 1
     return fibonacci(x - 1) + fibonacci(x - 2)
 
-
-if __name__ == "__main__":
-    print(fibonacci(8))
+print(fibonacci(3))
