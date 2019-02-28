@@ -1,0 +1,37 @@
+"""
+The function solution(A) returns the smallest positive integer (greater than 0)
+that does not occur in A, given an array A of N integers.
+The following assumptions are considered:
+   1. N is an integer within the range[1......1000,000]
+   2. Each element of array A is an integer within the range[-1000,000......1000,000]
+Examples:
+  Given A = [1,2,3], the function returns 4
+  Given A = [-1,-3], the function returns 1
+"""
+
+
+def solution(A):
+    n = len(A)
+    A = sorted(A)  #Sorts the list in ascending order
+    j = 1
+    for i in range(n):    #Range is from 0 to n   
+        if A[i] > 0 and A[i] == j:
+            j += 1
+            continue
+        elif A[i] == 0:
+            continue
+        elif A[i] < 0:
+            continue
+    else:
+        print(j)
+
+
+solution([-1,-3])                #returns 1
+solution([-1,0,2])               #returns 1
+solution([-1,1,0])               #returns 2
+solution([1,-1])                 #returns 2
+solution([1,0,3])                #returns 2
+solution([1,3])                  #returns 2
+solution([-1,-3,0,1,2])          #returns 3
+solution([3,2,1])                #returns 4
+solution([1,3,6,4,1,2])          #returns 5
