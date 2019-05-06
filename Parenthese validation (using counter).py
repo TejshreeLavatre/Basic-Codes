@@ -17,6 +17,6 @@ def bracket(foo1):
         return print(foo1, " is Invalid")
 
 
-bracket("())(()")
+bracket(")(( ))")
 bracket("(()())")
 bracket("(())(())")
